@@ -1,0 +1,43 @@
+.itemHolder {
+    width: 100%;
+    height: 120px;
+    border-radius: 8px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    background-color: rgb(244, 121, 233);
+}
+
+.itemName {
+    font-size: 30px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    color: white;
+}
+
+.BottonSection2 {
+    height: 100%;
+    flex-basis: 50px;
+    border-radius: 8px;
+    background-color: rgb(61, 61, 237);
+    color: white;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.itemPrice {
+    font-size: 25px;
+    font-weight: bolder;
+    color: darkgreen;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}

@@ -1,0 +1,69 @@
+.boxHolder {
+    width: 350px;
+    height: 350px;
+    margin-left: 40px;
+    border-radius: 8px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../images/back.webp");
+    margin-top: 40px;
+}
+
+@media only screen and (max-width: 780px) {
+    .boxHolder {
+        width: 280px !important;
+    }
+}
+
+@media only screen and (max-width: 669px) {
+    .boxHolder {
+        width: 220px !important;
+    }
+}
+
+@media only screen and (max-width: 519px) {
+    .boxHolder {
+        width: 90% !important;
+        margin-left: 0;
+    }
+}
+
+.nameSection {
+    font-size: 40px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    color: white;
+}
+
+.seperator {
+    width: 100%;
+    border-bottom: 4px solid rgb(6, 4, 4);
+}
+
+.priceSection {
+    font-size: 40px;
+    font-weight: bolder;
+    color: darkgreen;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BottonSection {
+    height: 50px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: rgb(61, 61, 237);
+    color: white;
+    border: none;
+    font-size: 25px;
+    margin-top: 10px;
+    cursor: pointer;
+}
