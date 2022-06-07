@@ -13,6 +13,10 @@ import Box from '../components/Box';
 export default function MainPage() {
   const [balance, setBalance] = useState(15000);
   const [alert, setShowAlert] = useState(false);
+
+  const [isTyping, setIsTyping] = useState(false);
+  const [timeOut, setTimeOut] = useState(0);
+
   const [showBasket, setShowBasket] = useState(false);
   const [num, setNum] = useState(0);
   const [basket, setBasket] = useState([]);
@@ -28,16 +32,38 @@ export default function MainPage() {
       setShowBasket(true);
     }
   };
+
+  // setTimeout(()=>{
+  //   if(isTyping){
+  //     let newTime = timeOut+1;
+  //     if(newTime>=3){
+  //       setIsTyping(false);
+  //     }else{
+  //       setTimeOut(newTime);
+  //     }
+  //   }
+  // },1000);
+  let searchTimeout ;
+  
   const searchPoks = (e) => {
-    const result = pokemon.filter((item) => item.name.match(e.target.value));
-    setSearchedPoks(result);
+    clearTimeout(searchTimeout);
+    searchTimeout==setTimeout(()=>{
+      const result = pokemon.filter((item) => item.name.match(e.target.value));
+      setSearchedPoks(result);
+    },3000);
   };
+
+
+
   const addMoney = () => {
     setBalance(balance + parseInt(num, 10));
     setNum(0);
     handleClose();
   };
   useEffect(() => {
+
+  
+
     const fetchPokemon = async () => {
       const newPoks = [];
       await fetch('https://pokeapi.co/api/v2/pokemon?offset=10&limit=10')
